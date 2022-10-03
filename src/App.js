@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.css'
+import About from './Container/About';
+import Profile from './Container/Profile';
+import React,{useState} from 'react';
+import {Route,Routes,Link,useNavigate} from 'react-router-dom';
 function App() {
+  const [state,setState] = useState('')
+  const navigate = useNavigate()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>ASWIN</h1>
+      {/* <Link to='/about'>About Page</Link><br/>
+      <Link to='/profile'>Profile Page</Link> */}
+      <button onClick={()=>navigate('/about')}>About Page</button>
+      <button onClick={()=>navigate('/profile')}>Profile Page</button>
+      <Routes>
+      <Route element={<About />}  path="/about" />
+      <Route element={<Profile />}  path="/profile" />
+      </Routes>
     </div>
   );
 }
 
-export default App;
+export default App; 
