@@ -6,7 +6,7 @@ function One() {
     <div style={{backgroundColor:'yellow',width:'400px'}}>
 
         <h1>Layer one</h1>
-        <Two></Two>
+        <Two ></Two>
     </div>
   )
 }

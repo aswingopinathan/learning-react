@@ -5,7 +5,7 @@ function Profile() {
   return (
     <div style={{backgroundColor:'blue',width:'500px'}}>
         <h1>Profile</h1>
-        <One/>
+        <One />
     </div>
   )
 }
